@@ -1,0 +1,4 @@
+interface:
+  display_name: "TestHub Demo Development"
+  short_description: "按 TestHub Demo 架构开发业务模块实践"
+  default_prompt: "使用 $testhub-demo-development，按当前 Django/Vue 骨架开发下一个业务模块。"

@@ -1,0 +1,16 @@
+import api from '@/utils/api'
+
+export const getProjectModules = (params = {}) => api.get('/project-knowledge/modules/', { params })
+export const getProjectModuleTree = (project) => api.get('/project-knowledge/modules/tree/', { params: { project } })
+export const createProjectModule = (payload) => api.post('/project-knowledge/modules/', payload)
+export const updateProjectModule = (id, payload) => api.patch(`/project-knowledge/modules/${id}/`, payload)
+export const confirmProjectModule = (id) => api.post(`/project-knowledge/modules/${id}/confirm/`)
+export const getProjectKnowledgeItems = (params = {}) => api.get('/project-knowledge/knowledge-items/', { params })
+export const createProjectKnowledgeItem = (payload) => api.post('/project-knowledge/knowledge-items/', payload)
+export const getProjectKnowledgeRevisions = (params = {}) => api.get('/project-knowledge/knowledge-revisions/', { params })
+export const confirmProjectKnowledgeRevision = (id) => api.post(`/project-knowledge/knowledge-revisions/${id}/confirm/`)
+export const startKnowledgeExtraction = (payload) => api.post('/project-knowledge/extraction-runs/', payload)
+export const retryKnowledgeExtraction = (id) => api.post(`/project-knowledge/extraction-runs/${id}/retry/`)
+export const getSearchHealth = () => api.get('/search/index-jobs/health/')
+export const reindexProject = (project) => api.post('/search/index-jobs/reindex/', { project })
+export const retrySearchIndexJob = (id) => api.post(`/search/index-jobs/${id}/retry/`)

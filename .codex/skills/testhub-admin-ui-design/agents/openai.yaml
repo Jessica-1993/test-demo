@@ -1,0 +1,4 @@
+interface:
+  display_name: "TestHub Admin UI Design"
+  short_description: "Apply TestHub Demo admin UI rules"
+  default_prompt: "Use this skill to design or refactor TestHub Demo backend management screens with dense, consistent, high-frequency admin UI patterns."
